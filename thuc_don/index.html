@@ -131,11 +131,35 @@
                     <span>0909.123.456</span>
                 </a>
 
-            <button class="md:hidden text-white text-2xl focus:outline-none ml-2">
-                ☰
-            </button>
+                <button id="mobileMenuBtn" class="md:hidden text-white text-2xl focus:outline-none ml-2">
+                    ☰
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-brand-orange border-t border-orange-400 mt-3">
+            <div class="container mx-auto py-4 space-y-3">
+                <a href="/" class="block text-white text-lg font-medium py-2 px-4 hover:bg-orange-600 rounded transition">Trang chủ</a>
+                <a href="/gioi_thieu" class="block text-white text-lg font-medium py-2 px-4 hover:bg-orange-600 rounded transition">Giới thiệu</a>
+                <a href="/thuc_don" class="block text-white text-lg font-medium py-2 px-4 hover:bg-orange-600 rounded transition">Thực đơn</a>
+                <a href="/lien_he" class="block text-white text-lg font-medium py-2 px-4 hover:bg-orange-600 rounded transition">Liên hệ</a>
+                <a href="tel:0909123456" class="block text-white text-lg font-medium py-2 px-4 hover:bg-orange-600 rounded transition">
+                    <span>📞 Hotline: 0909.123.456</span>
+                </a>
+            </div>
         </div>
     </nav>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 
     <section class="bg-orange-50 py-12 text-center">
         <h1 class="text-4xl font-bold text-brand-orange">Thực Đơn Út Lan</h1>

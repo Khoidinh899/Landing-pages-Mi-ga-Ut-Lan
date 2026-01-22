@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mì Gà Xá Kén Út Lan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-orange': '#F59E0B', // Vàng cam chủ đạo
+                        'brand-red': '#DC2626',    // Đỏ điểm nhấn
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hiệu ứng cuộn mượt */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <style>
+        /* Ẩn thanh Google Dịch mặc định */
+        #google_translate_element { display: none; }
+        .goog-te-banner-frame { display: none !important; }
+        body { top: 0 !important; }
+        
+        /* Hiệu ứng cho cờ */
+        .flag-btn {
+            cursor: pointer;
+            transition: transform 0.2s;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .flag-btn:hover { transform: scale(1.1); border-color: white; }
+    </style>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'vi',
+                includedLanguages: 'vi,en,zh-CN',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        // Hàm kích hoạt dịch khi bấm vào cờ
+        function triggerTranslate(lang) {
+            var selectField = document.querySelector("select.goog-te-combo");
+            if (selectField) {
+                selectField.value = lang; 
+                selectField.dispatchEvent(new Event("change"));
+            }
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body class="bg-orange-50 font-sans text-gray-800">
+
+    <nav class="bg-brand-orange p-3 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex items-center">
+            
+            <a href="./" class="flex items-center gap-2 mr-8">
+                <img src="./images/Logo.png" 
+                     alt="Logo Út Lan" 
+                     class="h-16 w-auto object-contain hover:scale-105 transition duration-300 drop-shadow-md">
+                
+                <span class="hidden text-white font-bold text-2xl tracking-wider">Út Lan</span>
+            </a>
+
+            <div class="hidden md:flex space-x-6 text-white font-medium text-lg">
+                <a href="./" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Trang chủ</a>
+                <a href="gioi_thieu.html" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Giới thiệu</a>
+                <a href="thuc_don.html" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Thực đơn</a>
+                <a href="lien_he.html" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Liên hệ</a>
+            </div>
+
+            <div class="flex-grow"></div>
+
+            <div class="flex items-center gap-4">
+                
+                <div class="flex gap-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" 
+                         alt="Tiếng Việt" 
+                         onclick="triggerTranslate('vi')"
+                         class="flag-btn w-8 h-5 object-cover rounded shadow-sm"
+                         title="Tiếng Việt">
+                    
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" 
+                         alt="English" 
+                         onclick="triggerTranslate('en')"
+                         class="flag-btn w-8 h-5 object-cover rounded shadow-sm"
+                         title="English">
+
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" 
+                         alt="Chinese" 
+                         onclick="triggerTranslate('zh-CN')"
+                         class="flag-btn w-8 h-5 object-cover rounded shadow-sm"
+                         title="中文">
+                </div>
+
+                <div id="google_translate_element"></div>
+
+                <a href="tel:0909123456" class="hidden lg:flex items-center gap-2 border-2 border-white text-white px-4 py-1 rounded-full font-bold hover:bg-white hover:text-brand-orange transition">
+                    <span>📞</span>
+                    <span>0909.123.456</span>
+                </a>
+
+            <button class="md:hidden text-white text-2xl focus:outline-none ml-2">
+                ☰
+            </button>
+        </div>
+        
+    </div>
+</nav>
+            </div>
+            
+            <button class="md:hidden text-white text-2xl focus:outline-none">
+                ☰
+            </button>
+        </div>
+    </nav>
+
+    <section class="bg-orange-100 py-16 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-brand-orange mb-4">Câu Chuyện Của Út Lan</h1>
+            <p class="text-xl text-gray-600">"Hành trình mang hương vị Xá Kén về phố thị"</p>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto max-w-5xl">
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="order-2 md:order-1">
+                    <img src="https://via.placeholder.com/600x400?text=Anh+Quan+Ut+Lan+Xua" alt="Út Lan ngày xưa" class="rounded-xl shadow-lg w-full object-cover h-80">
+                </div>
+                <div class="order-1 md:order-2 space-y-4">
+                    <h2 class="text-3xl font-bold text-gray-800">Khởi Nguồn Đam Mê</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Mì Gà Xá Kén Út Lan không chỉ là một quán ăn, đó là tâm huyết của những người con muốn gìn giữ hương vị quê nhà. Xuất phát từ niềm yêu thích món <strong>Cải Xá Kén</strong> - một loại rau muối dân dã nhưng giòn ngon khó cưỡng, chúng tôi đã mày mò kết hợp nó với sợi mì trứng và gà ta thả vườn.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Sau nhiều lần thử nghiệm nước dùng, Út Lan đã tìm ra công thức "vàng": Nước lèo ngọt thanh từ xương, không lạm dụng gia vị, để vị chua dịu của xá kén được tỏa sáng.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="space-y-4">
+                    <h2 class="text-3xl font-bold text-gray-800">Sạch Sẽ & Tận Tâm</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Tại Út Lan, chúng tôi quan niệm: <em>"Khách ăn cũng như người nhà ăn"</em>.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li><strong>Không gian bếp mở:</strong> Khách hàng có thể nhìn thấy quy trình chế biến sạch sẽ, gọn gàng.</li>
+                        <li><strong>Nguyên liệu tươi mới:</strong> Gà nhập mới mỗi ngày, rau xá kén được muối theo quy trình khép kín đảm bảo vệ sinh.</li>
+                        <li><strong>Không gian thoáng mát:</strong> Quán được thiết kế để mang lại cảm giác thoải mái nhất cho thực khách Sài Gòn.</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/600x400?text=Anh+Bep+Sach+Se" alt="Bếp sạch sẽ" class="rounded-xl shadow-lg w-full object-cover h-80">
+                </div>
+            </div>
+
+            <div class="bg-gray-800 p-8 md:p-12 rounded-2xl text-center">
+                <h3 class="text-2xl font-bold text-brand-orange mb-4">Sứ Mệnh Của Chúng Tôi</h3>
+                <p class="text-gray-200 text-lg italic max-w-2xl mx-auto">
+                    "Mang đến một bữa ăn không chỉ ngon miệng mà còn lành mạnh, lưu giữ nét đẹp ẩm thực truyền thống giữa lòng thành phố hiện đại."
+                </p>
+                <div class="mt-8">
+                    <img src="./images/Logo.png" alt="Logo Út Lan" class="h-32 mx-auto">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="menu" class="py-12 px-4 bg-orange-50">
+        <div class="container mx-auto max-w-6xl">
+            <h3 class="text-3xl font-bold text-center text-brand-orange mb-10">Thực Đơn Đa Dạng</h3>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Mi+Nuoc"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Mì Gà (Nước)</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Thanh ngọt, ấm bụng</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Mi+Kho"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Mì Gà (Khô)</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Sốt trộn đậm đà</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Hu+Tiu+Nuoc"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Hủ Tíu (Nước)</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Dai mềm, nước trong</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Hu+Tiu+Kho"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Hủ Tíu (Khô)</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Thơm lừng tỏi phi</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Mien+Ga"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Miến Gà</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Sợi dong dai ngon</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Bun+Gao"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Bún Gạo</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Thơm mềm, dễ ăn</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Nui+Ga"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Nui Gà</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Món ngon cho bé</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
+
+            <div class="text-center md:text-left">
+                
+                <div class="mb-8 flex justify-center md:justify-start">
+                    <img src="./images/Logo.png" 
+                         alt="Logo Út Lan" 
+                         class="w-64 md:w-80 h-auto object-contain rounded-lg p-2 ">
+                </div>
+
+                <div class="space-y-3 text-gray-300">
+                    <p class="uppercase tracking-widest text-gray-500 text-sm font-bold mb-4">Thông tin liên hệ</p>
+                    
+                    <p>
+                        <span class="font-bold text-brand-orange">Địa chỉ:</span> 
+                        <span>480 Lạc Long Quân, P. Hoà Bình, TP.HCM</span>
+                    </p>
+                    <p>
+                        <span class="font-bold text-brand-orange">Hotline:</span> 
+                        <a href="tel:0909123456" class="hover:text-white transition">0909.123.456</a>
+                    </p>
+                    <p>
+                        <span class="font-bold text-brand-orange">Email:</span> 
+                        <span>lienhe@utlan.com</span>
+                    </p>
+                    <p>
+                        <span class="font-bold text-brand-orange">Giờ mở cửa:</span> 
+                        <span>17:00 - 22:00 (Thứ 2 - Thứ 6)</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full h-80 bg-gray-700 rounded-xl overflow-hidden shadow-2xl border-4 border-gray-600">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.528383627399!2d106.64270487485688!3d10.770783789377647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f0079673abf%3A0xf0a494cb0119c7ce!2zTcOsIEfDoCBYw6EgS8OpbiDDmnQgTGFu!5e0!3m2!1svi!2s!4v1769069070847!5m2!1svi!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+
+        <div class="text-center text-gray-500 text-sm mt-10 border-t border-gray-700 pt-6">
+            © 2026 Ut Lan Food Stall.
+            <br> Designer by Đinh Nhật Khôi.
+        </div>
+    </footer>
+
+</body>
+
+</html>

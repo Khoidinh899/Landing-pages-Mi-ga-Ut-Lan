@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mì Gà Xá Kén Út Lan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-orange': '#F59E0B', // Vàng cam chủ đạo
+                        'brand-red': '#DC2626',    // Đỏ điểm nhấn
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hiệu ứng cuộn mượt */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <style>
+        /* Ẩn thanh Google Dịch mặc định */
+        #google_translate_element { display: none; }
+        .goog-te-banner-frame { display: none !important; }
+        body { top: 0 !important; }
+        
+        /* Hiệu ứng cho cờ */
+        .flag-btn {
+            cursor: pointer;
+            transition: transform 0.2s;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .flag-btn:hover { transform: scale(1.1); border-color: white; }
+    </style>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'vi',
+                includedLanguages: 'vi,en,zh-CN',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        // Hàm kích hoạt dịch khi bấm vào cờ
+        function triggerTranslate(lang) {
+            var selectField = document.querySelector("select.goog-te-combo");
+            if (selectField) {
+                selectField.value = lang; 
+                selectField.dispatchEvent(new Event("change"));
+            }
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body class="bg-orange-50 font-sans text-gray-800">
+
+    <nav class="bg-brand-orange p-3 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex items-center">
+            
+            <a href="./" class="flex items-center gap-2 mr-8">
+                <img src="./images/Logo.png" 
+                     alt="Logo Út Lan" 
+                     class="h-16 w-auto object-contain hover:scale-105 transition duration-300 drop-shadow-md">
+                
+                <span class="hidden text-white font-bold text-2xl tracking-wider">Út Lan</span>
+            </a>
+
+            <div class="hidden md:flex space-x-6 text-white font-medium text-lg">
+                <a href="./" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Trang chủ</a>
+                <a href="gioi_thieu.html" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Giới thiệu</a>
+                <a href="thuc_don.html" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Thực đơn</a>
+                <a href="lien_he.html" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Liên hệ</a>
+            </div>
+
+            <div class="flex-grow"></div>
+
+            <div class="flex items-center gap-4">
+                
+                <div class="flex gap-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" 
+                         alt="Tiếng Việt" 
+                         onclick="triggerTranslate('vi')"
+                         class="flag-btn w-8 h-5 object-cover rounded shadow-sm"
+                         title="Tiếng Việt">
+                    
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" 
+                         alt="English" 
+                         onclick="triggerTranslate('en')"
+                         class="flag-btn w-8 h-5 object-cover rounded shadow-sm"
+                         title="English">
+
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" 
+                         alt="Chinese" 
+                         onclick="triggerTranslate('zh-CN')"
+                         class="flag-btn w-8 h-5 object-cover rounded shadow-sm"
+                         title="中文">
+                </div>
+
+                <div id="google_translate_element"></div>
+
+                <a href="tel:0909123456" class="hidden lg:flex items-center gap-2 border-2 border-white text-white px-4 py-1 rounded-full font-bold hover:bg-white hover:text-brand-orange transition">
+                    <span>📞</span>
+                    <span>0909.123.456</span>
+                </a>
+
+            <button class="md:hidden text-white text-2xl focus:outline-none ml-2">
+                ☰
+            </button>
+        </div>
+    </nav>
+
+    <section class="bg-orange-50 py-12 text-center">
+        <h1 class="text-4xl font-bold text-brand-orange">Thực Đơn Út Lan</h1>
+        <p class="text-gray-600 mt-2 text-lg">Hương vị gà ta thả vườn & Xá kén gia truyền</p>
+    </section>
+
+    <section class="py-12 px-4 bg-white">
+        <div class="container mx-auto max-w-4xl space-y-10">
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row hover:shadow-xl transition">
+                <div class="md:w-5/12 relative h-64 md:h-auto bg-gray-200">
+                    <img src="https://via.placeholder.com/500?text=Mì+Gà+Nước" alt="Mì Gà Nước" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+                        <h3 class="text-2xl font-bold text-white">Mì Gà Xá Kén (Nước)</h3>
+                    </div>
+                </div>
+                <div class="md:w-7/12 p-6 flex flex-col justify-center bg-yellow-50/30">
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border border-orange-100 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thường</span>
+                                <span class="font-bold text-xl text-brand-orange">40.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Thịt gà ta, thịt nạc, phèo non, xá kén.
+                            </p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-orange-200 shadow-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 bg-brand-red text-white text-xs px-2 py-1 font-bold rounded-bl-lg">Best Seller</div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thập Cẩm</span>
+                                <span class="font-bold text-xl text-brand-red">50.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Full topping tô thường + <strong class="text-gray-700">Xương & Tôm tươi</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-brand-red italic mt-4 text-right font-bold">
+                        * Lưu ý: Topping có thể thay đổi tuỳ theo thời điểm.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row hover:shadow-xl transition">
+                <div class="md:w-5/12 relative h-64 md:h-auto bg-gray-200">
+                    <img src="https://via.placeholder.com/500?text=Mì+Gà+Khô" alt="Mì Gà Khô" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+                        <h3 class="text-2xl font-bold text-white">Mì Gà Trộn (Khô)</h3>
+                    </div>
+                </div>
+                <div class="md:w-7/12 p-6 flex flex-col justify-center bg-yellow-50/30">
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border border-orange-100 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thường</span>
+                                <span class="font-bold text-xl text-brand-orange">40.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Thịt gà, thịt nạc, phèo non + Sốt trộn đặc biệt + Chén nước lèo riêng.
+                            </p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-orange-200 shadow-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 bg-brand-red text-white text-xs px-2 py-1 font-bold rounded-bl-lg">Yêu thích</div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thập Cẩm</span>
+                                <span class="font-bold text-xl text-brand-red">50.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Full tô thường + <strong class="text-gray-700">Xương & Tôm tươi</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-brand-red italic mt-4 text-right font-bold">
+                        * Lưu ý: Topping có thể thay đổi tuỳ theo thời điểm.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row hover:shadow-xl transition">
+                <div class="md:w-5/12 relative h-64 md:h-auto bg-gray-200">
+                    <img src="https://via.placeholder.com/500?text=Hủ+Tíu+Nước" alt="Hủ Tíu Nước" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+                        <h3 class="text-2xl font-bold text-white">Hủ Tíu Gà (Nước)</h3>
+                    </div>
+                </div>
+                <div class="md:w-7/12 p-6 flex flex-col justify-center bg-yellow-50/30">
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border border-orange-100 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thường</span>
+                                <span class="font-bold text-xl text-brand-orange">40.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Thịt gà ta, thịt nạc, phèo non, hành phi thơm lừng.
+                            </p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-orange-200 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thập Cẩm</span>
+                                <span class="font-bold text-xl text-brand-red">50.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Gà, nạc, phèo + <strong class="text-gray-700">Xương & Tôm tươi</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-brand-red italic mt-4 text-right font-bold">
+                        * Lưu ý: Topping có thể thay đổi tuỳ theo thời điểm.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row hover:shadow-xl transition">
+                <div class="md:w-5/12 relative h-64 md:h-auto bg-gray-200">
+                    <img src="https://via.placeholder.com/500?text=Hủ+Tíu+Khô" alt="Hủ Tíu Khô" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+                        <h3 class="text-2xl font-bold text-white">Hủ Tíu Gà (Khô)</h3>
+                    </div>
+                </div>
+                <div class="md:w-7/12 p-6 flex flex-col justify-center bg-yellow-50/30">
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border border-orange-100 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thường</span>
+                                <span class="font-bold text-xl text-brand-orange">40.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Thịt gà, nạc, phèo, tỏi phi + Sốt hủ tíu + Nước lèo riêng.
+                            </p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-orange-200 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thập Cẩm</span>
+                                <span class="font-bold text-xl text-brand-red">50.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Full tô thường + <strong class="text-gray-700">Xương & Tôm tươi</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-brand-red italic mt-4 text-right font-bold">
+                        * Lưu ý: Topping có thể thay đổi tuỳ theo thời điểm.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row hover:shadow-xl transition">
+                <div class="md:w-5/12 relative h-64 md:h-auto bg-gray-200">
+                    <img src="https://via.placeholder.com/500?text=Miến+Gà" alt="Miến Gà" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+                        <h3 class="text-2xl font-bold text-white">Miến Gà Dong</h3>
+                    </div>
+                </div>
+                <div class="md:w-7/12 p-6 flex flex-col justify-center bg-yellow-50/30">
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border border-orange-100 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thường</span>
+                                <span class="font-bold text-xl text-brand-orange">40.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Thịt gà ta, thịt nạc, phèo non, miến dong dai ngon.
+                            </p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-orange-200 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thập Cẩm</span>
+                                <span class="font-bold text-xl text-brand-red">50.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Gà, nạc, phèo + <strong class="text-gray-700">Xương & Tôm tươi</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-brand-red italic mt-4 text-right font-bold">
+                        * Lưu ý: Topping có thể thay đổi tuỳ theo thời điểm.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row hover:shadow-xl transition">
+                <div class="md:w-5/12 relative h-64 md:h-auto bg-gray-200">
+                    <img src="https://via.placeholder.com/500?text=Bún+Gạo" alt="Bún Gạo" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+                        <h3 class="text-2xl font-bold text-white">Bún Gạo Nấu</h3>
+                    </div>
+                </div>
+                <div class="md:w-7/12 p-6 flex flex-col justify-center bg-yellow-50/30">
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border border-orange-100 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thường</span>
+                                <span class="font-bold text-xl text-brand-orange">40.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Thịt gà ta, thịt nạc, phèo non.
+                            </p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-orange-200 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thập Cẩm</span>
+                                <span class="font-bold text-xl text-brand-red">50.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Full topping + <strong class="text-gray-700">Xương & Tôm tươi</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-brand-red italic mt-4 text-right font-bold">
+                        * Lưu ý: Topping có thể thay đổi tuỳ theo thời điểm.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row hover:shadow-xl transition">
+                <div class="md:w-5/12 relative h-64 md:h-auto bg-gray-200">
+                    <img src="https://via.placeholder.com/500?text=Nui+Gà" alt="Nui Gà" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+                        <h3 class="text-2xl font-bold text-white">Nui Gà</h3>
+                    </div>
+                </div>
+                <div class="md:w-7/12 p-6 flex flex-col justify-center bg-yellow-50/30">
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border border-orange-100 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thường</span>
+                                <span class="font-bold text-xl text-brand-orange">40.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Thịt gà ta, thịt nạc, phèo non. Món ưa thích của bé.
+                            </p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-orange-200 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-lg text-gray-800">Tô Thập Cẩm</span>
+                                <span class="font-bold text-xl text-brand-red">50.000đ</span>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                <span class="text-brand-red font-bold">Topping:</span> Gà, nạc, phèo + <strong class="text-gray-700">Xương & Tôm tươi</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-brand-red italic mt-4 text-right font-bold">
+                        * Lưu ý: Topping có thể thay đổi tuỳ theo thời điểm.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
+
+            <div class="text-center md:text-left space-y-4">
+                <div class="mb-8 flex justify-center md:justify-start">
+                    <img src="./images/Logo.png" 
+                         alt="Logo Út Lan" 
+                         class="w-64 md:w-80 h-auto object-contain rounded-lg p-2 ">
+                </div>
+
+                <div class="space-y-3 text-gray-300">
+                    <p class="uppercase tracking-widest text-gray-500 text-sm font-bold mb-4">Thông tin liên hệ</p>
+                    
+                    <p>
+                        <span class="font-bold text-brand-orange">Địa chỉ:</span> 
+                        <span>480 Lạc Long Quân, P. Hoà Bình, TP.HCM</span>
+                    </p>
+                    <p>
+                        <span class="font-bold text-brand-orange">Hotline:</span> 
+                        <a href="tel:0909123456" class="hover:text-white transition">0909.123.456</a>
+                    </p>
+                    <p>
+                        <span class="font-bold text-brand-orange">Email:</span> 
+                        <span>lienhe@utlan.com</span>
+                    </p>
+                    <p>
+                        <span class="font-bold text-brand-orange">Giờ mở cửa:</span> 
+                        <span>17:00 - 22:00 (Thứ 2 - Thứ 6)</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full h-80 bg-gray-700 rounded-xl overflow-hidden shadow-2xl border-4 border-gray-600">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.528383627399!2d106.64270487485688!3d10.770783789377647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f0079673abf%3A0xf0a494cb0119c7ce!2zTcOsIEfDoCBYw6EgS8OpbiDDmnQgTGFu!5e0!3m2!1svi!2s!4v1769069070847!5m2!1svi!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+
+        <div class="text-center text-gray-500 text-sm mt-10 border-t border-gray-700 pt-6">
+            © 2026 Ut Lan Food Stall.
+            <br> Designer by Đinh Nhật Khôi.
+        </div>
+    </footer>
+
+</body>
+
+</html>

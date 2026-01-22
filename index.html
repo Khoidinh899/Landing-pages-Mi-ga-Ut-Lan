@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mì Gà Xá Kén Út Lan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-orange': '#F59E0B', // Vàng cam chủ đạo
+                        'brand-red': '#DC2626',    // Đỏ điểm nhấn
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hiệu ứng cuộn mượt */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <style>
+        /* Ẩn thanh Google Dịch mặc định */
+        #google_translate_element { display: none; }
+        .goog-te-banner-frame { display: none !important; }
+        body { top: 0 !important; }
+        
+        /* Hiệu ứng cho cờ */
+        .flag-btn {
+            cursor: pointer;
+            transition: transform 0.2s;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .flag-btn:hover { transform: scale(1.1); border-color: white; }
+    </style>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'vi',
+                includedLanguages: 'vi,en,zh-CN',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        // Hàm kích hoạt dịch khi bấm vào cờ
+        function triggerTranslate(lang) {
+            var selectField = document.querySelector("select.goog-te-combo");
+            if (selectField) {
+                selectField.value = lang; 
+                selectField.dispatchEvent(new Event("change"));
+            }
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body class="bg-orange-50 font-sans text-gray-800">
+
+    <nav class="bg-brand-orange p-3 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex items-center">
+            
+            <a href="./" class="flex items-center gap-2 mr-8">
+                <img src="./images/Logo.png" 
+                     alt="Logo Út Lan" 
+                     class="h-16 w-auto object-contain hover:scale-105 transition duration-300 drop-shadow-md">
+                
+                <span class="hidden text-white font-bold text-2xl tracking-wider">Út Lan</span>
+            </a>
+
+            <div class="hidden md:flex space-x-6 text-white font-medium text-lg">
+                <a href="./" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Trang chủ</a>
+                <a href="gioi_thieu.html" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Giới thiệu</a>
+                <a href="thuc_don.html" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Thực đơn</a>
+                <a href="lien_he.html" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Liên hệ</a>
+            </div>
+
+            <div class="flex-grow"></div>
+
+            <div class="flex items-center gap-4">
+                
+                <div class="flex gap-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" 
+                         alt="Tiếng Việt" 
+                         onclick="triggerTranslate('vi')"
+                         class="flag-btn w-8 h-5 object-cover rounded shadow-sm"
+                         title="Tiếng Việt">
+                    
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" 
+                         alt="English" 
+                         onclick="triggerTranslate('en')"
+                         class="flag-btn w-8 h-5 object-cover rounded shadow-sm"
+                         title="English">
+
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" 
+                         alt="Chinese" 
+                         onclick="triggerTranslate('zh-CN')"
+                         class="flag-btn w-8 h-5 object-cover rounded shadow-sm"
+                         title="中文">
+                </div>
+
+                <div id="google_translate_element"></div>
+
+                <a href="tel:0909123456" class="hidden lg:flex items-center gap-2 border-2 border-white text-white px-4 py-1 rounded-full font-bold hover:bg-white hover:text-brand-orange transition">
+                    <span>Hotline: </span>
+                    <span>0909.123.456</span>
+                </a>
+
+            <button class="md:hidden text-white text-2xl focus:outline-none ml-2">
+                ☰
+            </button>
+        </div>
+        
+    </div>
+</nav>
+            </div>
+            
+            <button class="md:hidden text-white text-2xl focus:outline-none">
+                ☰
+            </button>
+        </div>
+    </nav>
+
+    <header class="relative bg-yellow-100 py-16 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-orange-600 mb-4 drop-shadow-sm">
+                Mì Gà Xá Kén
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-700 italic mb-8">
+                "Nấu bằng tâm - Ngon bằng vị"
+            </p>
+
+            <div
+                class="w-full max-w-4xl mx-auto h-64 md:h-96 bg-gray-300 rounded-2xl shadow-inner mb-8 flex items-center justify-center text-gray-500 overflow-hidden">
+                <img src="https://via.placeholder.com/800x400?text=Anh+Bia+Mì+Gà+Xá+Kén" alt="Mì Gà Xá Kén Út Lan"
+                    class="w-full h-full object-cover opacity-90 hover:opacity-100 transition duration-500">
+            </div>
+
+            <a href="#menu"
+                class="inline-block bg-brand-red text-white text-lg font-bold px-8 py-4 rounded-full shadow-lg hover:bg-red-700 hover:shadow-xl transition transform hover:-translate-y-1">
+                Xem Menu Ngay
+            </a>
+        </div>
+    </header>
+
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-orange leading-tight">
+                        Câu Chuyện <br> <span class="text-gray-800">Mì Gà Xá Kén Út Lan</span>
+                    </h2>
+
+                    <div class="space-y-4 text-gray-600 text-lg leading-relaxed text-justify">
+                        <p>
+                            <strong class="text-gray-800">Hương Vị Mới Lạ Từ Ký Ức Thân Quen.</strong>
+                            Mì Gà Xá Kén Út Lan không chỉ là một món ăn, đó là sự bứt phá đầy tinh tế. Sự kết hợp giữa
+                            sợi mì trứng vàng óng và <span class="text-brand-red font-semibold">Cải Xá Kén</span> – loại
+                            rau muối chua ngọt, giòn sần sật độc đáo – đã tạo nên một trải nghiệm vị giác bùng nổ ngay
+                            từ lần nếm thử đầu tiên.
+                        </p>
+                        <p>
+                            <strong class="text-gray-800">Sạch Sẽ - Tận Tâm - Nguyên Bản.</strong>
+                            Tại Út Lan, món ăn ngon bắt đầu từ sự sạch sẽ. Khu vực chế biến luôn mở để thực khách tận
+                            mắt nhìn thấy từng công đoạn: từ lúc trụng mì, xếp từng miếng <strong>gà ta thả
+                                vườn</strong> dai ngọt, đến khi chan nước lèo nóng hổi dậy mùi thơm lừng.
+                        </p>
+                        <p>
+                            <strong class="text-gray-800">Bí Mật Nằm Ở "Cái Tâm".</strong>
+                            Nước lèo được hầm từ xương gà trong nhiều giờ để đạt độ ngọt thanh tự nhiên, hòa quyện cùng
+                            vị chua dịu của Xá Kén giúp thực khách ăn mãi không ngán.
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-l-4 border-brand-orange pl-4">
+                        <p class="text-xl italic text-gray-700 font-bold">"Nấu bằng tâm - Ngon bằng vị"</p>
+                        <p class="text-sm text-gray-500 mt-1">— Cam kết từ Út Lan —</p>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="#menu"
+                            class="inline-block border-2 border-brand-red text-brand-red font-bold px-6 py-2 rounded-full hover:bg-brand-red hover:text-white transition">
+                            Thử Món Ngay
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative h-full min-h-[400px]">
+                    <div
+                        class="absolute inset-0 bg-orange-100 rounded-tr-[50px] rounded-bl-[50px] transform rotate-3 z-0">
+                    </div>
+                    <img src="https://via.placeholder.com/600x800?text=Anh+Minh+Hoa+Cau+Chuyen" alt="Câu chuyện Mì Gà"
+                        class="relative z-10 w-full h-full object-cover rounded-tr-[50px] rounded-bl-[50px] shadow-2xl hover:scale-[1.02] transition duration-500">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-12 px-4 bg-orange-50">
+        <div class="container mx-auto max-w-6xl">
+            <h3 class="text-3xl font-bold text-center text-brand-orange mb-10">Thực Đơn Đa Dạng</h3>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Mi+Nuoc"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Mì Gà (Nước)</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Thanh ngọt, ấm bụng</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Mi+Kho"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Mì Gà (Khô)</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Sốt trộn đậm đà</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Hu+Tiu+Nuoc"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Hủ Tíu (Nước)</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Dai mềm, nước trong</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Hu+Tiu+Kho"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Hủ Tíu (Khô)</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Thơm lừng tỏi phi</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Mien+Ga"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Miến Gà</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Sợi dong dai ngon</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Bun+Gao"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Bún Gạo</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Thơm mềm, dễ ăn</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Nui+Ga"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Nui Gà</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Món ngon cho bé</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
+
+            <div class="text-center md:text-left space-y-4">
+                <div class="mb-8 flex justify-center md:justify-start">
+                    <img src="./images/Logo.png" 
+                         alt="Logo Út Lan" 
+                         class="w-64 md:w-80 h-auto object-contain rounded-lg p-2 ">
+                </div>
+
+                <div class="space-y-3 text-gray-300">
+                    <p class="uppercase tracking-widest text-gray-500 text-sm font-bold mb-4">Thông tin liên hệ</p>
+                    
+                    <p>
+                        <span class="font-bold text-brand-orange">Địa chỉ:</span> 
+                        <span>480 Lạc Long Quân, P. Hoà Bình, TP.HCM</span>
+                    </p>
+                    <p>
+                        <span class="font-bold text-brand-orange">Hotline:</span> 
+                        <a href="tel:0909123456" class="hover:text-white transition">0909.123.456</a>
+                    </p>
+                    <p>
+                        <span class="font-bold text-brand-orange">Email:</span> 
+                        <span>lienhe@utlan.com</span>
+                    </p>
+                    <p>
+                        <span class="font-bold text-brand-orange">Giờ mở cửa:</span> 
+                        <span>17:00 - 22:00 (Thứ 2 - Thứ 6)</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full h-80 bg-gray-700 rounded-xl overflow-hidden shadow-2xl border-4 border-gray-600">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.528383627399!2d106.64270487485688!3d10.770783789377647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f0079673abf%3A0xf0a494cb0119c7ce!2zTcOsIEfDoCBYw6EgS8OpbiDDmnQgTGFu!5e0!3m2!1svi!2s!4v1769069070847!5m2!1svi!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+
+        <div class="text-center text-gray-500 text-sm mt-10 border-t border-gray-700 pt-6">
+            © 2026 Ut Lan Food Stall.
+            <br> Designer by Đinh Nhật Khôi.
+        </div>
+    </footer>
+
+</body>
+
+</html>

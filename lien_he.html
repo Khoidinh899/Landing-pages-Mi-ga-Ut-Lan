@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mì Gà Xá Kén Út Lan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-orange': '#F59E0B', // Vàng cam chủ đạo
+                        'brand-red': '#DC2626',    // Đỏ điểm nhấn
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hiệu ứng cuộn mượt */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <style>
+        /* Ẩn thanh Google Dịch mặc định */
+        #google_translate_element { display: none; }
+        .goog-te-banner-frame { display: none !important; }
+        body { top: 0 !important; }
+        
+        /* Hiệu ứng cho cờ */
+        .flag-btn {
+            cursor: pointer;
+            transition: transform 0.2s;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .flag-btn:hover { transform: scale(1.1); border-color: white; }
+    </style>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'vi',
+                includedLanguages: 'vi,en,zh-CN',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        // Hàm kích hoạt dịch khi bấm vào cờ
+        function triggerTranslate(lang) {
+            var selectField = document.querySelector("select.goog-te-combo");
+            if (selectField) {
+                selectField.value = lang; 
+                selectField.dispatchEvent(new Event("change"));
+            }
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body class="bg-orange-50 font-sans text-gray-800">
+
+    <nav class="bg-brand-orange p-3 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex items-center">
+            
+            <a href="./" class="flex items-center gap-2 mr-8">
+                <img src="./images/Logo.png" 
+                     alt="Logo Út Lan" 
+                     class="h-16 w-auto object-contain hover:scale-105 transition duration-300 drop-shadow-md">
+                
+                <span class="hidden text-white font-bold text-2xl tracking-wider">Út Lan</span>
+            </a>
+
+            <div class="hidden md:flex space-x-6 text-white font-medium text-lg">
+                <a href="./" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Trang chủ</a>
+                <a href="gioi_thieu.html" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Giới thiệu</a>
+                <a href="thuc_don.html" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Thực đơn</a>
+                <a href="lien_he.html" class="hover:text-yellow-200 transition border-b-2 border-transparent hover:border-white">Liên hệ</a>
+            </div>
+
+            <div class="flex-grow"></div>
+
+            <div class="flex items-center gap-4">
+                
+                <div class="flex gap-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" 
+                         alt="Tiếng Việt" 
+                         onclick="triggerTranslate('vi')"
+                         class="flag-btn w-8 h-5 object-cover rounded shadow-sm"
+                         title="Tiếng Việt">
+                    
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" 
+                         alt="English" 
+                         onclick="triggerTranslate('en')"
+                         class="flag-btn w-8 h-5 object-cover rounded shadow-sm"
+                         title="English">
+
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" 
+                         alt="Chinese" 
+                         onclick="triggerTranslate('zh-CN')"
+                         class="flag-btn w-8 h-5 object-cover rounded shadow-sm"
+                         title="中文">
+                </div>
+
+                <div id="google_translate_element"></div>
+
+                <a href="tel:0909123456" class="hidden lg:flex items-center gap-2 border-2 border-white text-white px-4 py-1 rounded-full font-bold hover:bg-white hover:text-brand-orange transition">
+                    <span>📞</span>
+                    <span>0909.123.456</span>
+                </a>
+
+            <button class="md:hidden text-white text-2xl focus:outline-none ml-2">
+                ☰
+            </button>
+        </div>
+        
+    </div>
+</nav>
+            </div>
+            
+            <button class="md:hidden text-white text-2xl focus:outline-none">
+                ☰
+            </button>
+        </div>
+    </nav>
+
+    <section class="bg-orange-100 py-12 text-center">
+        <h1 class="text-4xl font-bold text-brand-orange mb-2">Liên Hệ Út Lan</h1>
+        <p class="text-gray-600">Chúng tôi luôn lắng nghe ý kiến của bạn</p>
+    </section>
+
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <div class="space-y-8">
+                    
+                    <div class="bg-orange-50 p-6 rounded-xl border border-orange-200">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Thông Tin Liên Lạc</h2>
+                        <div class="flex flex-col md:flex-row md:items-start gap-2">
+                                <span class="font-bold text-brand-orange min-w-[130px]">Địa chỉ:</span>
+                                <span>480 Lạc Long Quân, Phường Hoà Bình, Thành phố Hồ Chí Minh, Việt Nam</span>
+                            </div>
+
+                            <div class="flex flex-col md:flex-row md:items-center gap-2">
+                                <span class="font-bold text-brand-orange min-w-[130px]">Số điện thoại:</span>
+                                <a href="tel:0909123456" class="font-bold text-gray-900 hover:text-brand-orange transition">0909.123.456</a>
+                            </div>
+
+                            <div class="flex flex-col md:flex-row md:items-center gap-2">
+                                <span class="font-bold text-brand-orange min-w-[130px]">Email:</span>
+                                <span>lienhe@utlan.com</span>
+                            </div>
+
+                            <div class="flex flex-col md:flex-row md:items-center gap-2">
+                                <span class="font-bold text-brand-orange min-w-[130px]">Giờ mở cửa:</span>
+                                <span>17:00 - 22:00 (Thứ 2 - Thứ 6)</span>
+                            </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Gửi Góp Ý Cho Quán</h2>
+                        <form class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <input type="text" placeholder="Tên của bạn" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-brand-orange bg-gray-50">
+                                <input type="text" placeholder="Số điện thoại" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-brand-orange bg-gray-50">
+                            </div>
+                            <input type="email" placeholder="Email (nếu có)" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-brand-orange bg-gray-50">
+                            <textarea rows="4" placeholder="Nội dung lời nhắn..." class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-brand-orange bg-gray-50"></textarea>
+                            
+                            <button type="button" class="bg-brand-orange text-white font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition shadow-lg w-full md:w-auto">
+                                Gửi Tin Nhắn
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="h-full min-h-[400px] bg-gray-200 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.528383627399!2d106.64270487485688!3d10.770783789377647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f0079673abf%3A0xf0a494cb0119c7ce!2zTcOsIEfDoCBYw6EgS8OpbiDDmnQgTGFu!5e0!3m2!1svi!2s!4v1769069070847!5m2!1svi!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
+
+            <div class="text-center md:text-left space-y-4">
+                <div class="mb-8 flex justify-center md:justify-start">
+                    <img src="./images/Logo.png" 
+                         alt="Logo Út Lan" 
+                         class="w-64 md:w-80 h-auto object-contain rounded-lg p-2 ">
+                </div>
+
+                <div class="space-y-3 text-gray-300">
+                    <p class="uppercase tracking-widest text-gray-500 text-sm font-bold mb-4">Thông tin liên hệ</p>
+                    
+                    <p>
+                        <span class="font-bold text-brand-orange">Địa chỉ:</span> 
+                        <span>480 Lạc Long Quân, P. Hoà Bình, TP.HCM</span>
+                    </p>
+                    <p>
+                        <span class="font-bold text-brand-orange">Hotline:</span> 
+                        <a href="tel:0909123456" class="hover:text-white transition">0909.123.456</a>
+                    </p>
+                    <p>
+                        <span class="font-bold text-brand-orange">Email:</span> 
+                        <span>lienhe@utlan.com</span>
+                    </p>
+                    <p>
+                        <span class="font-bold text-brand-orange">Giờ mở cửa:</span> 
+                        <span>17:00 - 22:00 (Thứ 2 - Thứ 6)</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full h-80 bg-gray-700 rounded-xl overflow-hidden shadow-2xl border-4 border-gray-600">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.528383627399!2d106.64270487485688!3d10.770783789377647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f0079673abf%3A0xf0a494cb0119c7ce!2zTcOsIEfDoCBYw6EgS8OpbiDDmnQgTGFu!5e0!3m2!1svi!2s!4v1769069070847!5m2!1svi!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+
+        <div class="text-center text-gray-500 text-sm mt-10 border-t border-gray-700 pt-6">
+            © 2026 Ut Lan Food Stall.
+            <br> Designer by Đinh Nhật Khôi.
+        </div>
+    </footer>
+
+</body>
+
+</html>

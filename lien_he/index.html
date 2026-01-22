@@ -151,16 +151,6 @@
         </div>
     </nav>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
-
     <section class="bg-orange-100 py-12 text-center">
         <h1 class="text-4xl font-bold text-brand-orange mb-2">Liên Hệ Út Lan</h1>
         <p class="text-gray-600">Chúng tôi luôn lắng nghe ý kiến của bạn</p>
@@ -276,6 +266,47 @@
             <br> Designer by Đinh Nhật Khôi.
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Scroll to top button
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            if (scrollToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        scrollToTopBtn.classList.remove('hidden');
+                    } else {
+                        scrollToTopBtn.classList.add('hidden');
+                    }
+                });
+                
+                scrollToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="hidden fixed bottom-6 right-6 bg-brand-orange text-white p-4 rounded-full shadow-lg hover:bg-orange-600 transition transform hover:scale-110 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
 
 </body>
 

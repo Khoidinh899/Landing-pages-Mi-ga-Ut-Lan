@@ -46,9 +46,17 @@
 
     <style>
         /* Ẩn thanh Google Dịch mặc định */
-        #google_translate_element { display: none; }
+        #google_translate_element { display: none !important; }
         .goog-te-banner-frame { display: none !important; }
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
         body { top: 0 !important; }
+        .skiptranslate { display: none !important; }
+        
+        /* Ẩn toàn bộ iframe và widget của Google Translate */
+        body > .skiptranslate { display: none !important; }
+        iframe.skiptranslate { display: none !important; }
+        .goog-te-gadget { display: none !important; }
+        .goog-te-combo { display: none !important; }
         
         /* Hiệu ứng cho cờ */
         .flag-btn {
@@ -303,6 +311,97 @@
                     </div>
                 </div>
 
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Hu+Tiu+Xuong"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Hủ Tíu Xương</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Xương thơm ngọt</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Mi+Xuong"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Mì Xương</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Xương hầm đậm đà</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Banh+Canh+Xuong"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Bánh Canh Xương</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Bánh canh dai ngon</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Nui+Xuong"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Nui Xương</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Nui thơm nước ngọt</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Hu+Tiu+Gio+Heo"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Hủ Tíu Giò Heo</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Giò heo thơm béo</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Mi+Gio+Heo"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Mì Giò Heo</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Giò heo mềm ngon</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div
+                        class="h-40 md:h-48 bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="https://via.placeholder.com/300?text=Banh+Canh+Gio+Heo"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-1">Bánh Canh Giò Heo</h4>
+                        <p class="text-gray-500 text-xs md:text-sm mb-2">Đậm đà hương vị</p>
+                        <span class="text-lg font-bold text-brand-red">40.000đ</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -331,11 +430,11 @@
                     </p>
                     <p>
                         <span class="font-bold text-brand-orange">Email:</span> 
-                        <span>nguyenannthu211104@gmail.com</span>
+                        <span>nguyenanhthu211104@gmail.com</span>
                     </p>
                     <p>
                         <span class="font-bold text-brand-orange">Giờ mở cửa:</span> 
-                        <span>17:00 - 22:00 (Thứ 2 - Thứ 6)</span>
+                        <span>16:00 - 22:00 (Thứ 2 - Thứ 6)</span>
                     </p>
                 </div>
             </div>
